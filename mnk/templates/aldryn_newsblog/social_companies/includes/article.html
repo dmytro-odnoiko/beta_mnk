@@ -1,0 +1,27 @@
+{% load staticfiles thumbnail cms_tags apphooks_config_tags %}
+
+<!-- {% if article.is_featured %} featured{% endif %} -->
+{% if not article.published %}
+{% else %}
+
+   <article class="col-md-6">
+      {% if article.featured_image_id %}
+         <div class="card-head image" style="background-image: url({% thumbnail article.featured_image 800x450 crop subject_location=article.featured_image.subject_location %})">
+         {% else %}
+         {% endif %}
+         <img class="logo" src="" alt="">
+         <span class="year">
+            {{ article.publishing_date|date:"Y" }}
+         </span>
+      </div>
+      <div class="card-body">
+         <h2>{% render_model article "title" %}</h2>
+         <!-- <p class="description"></p> -->
+         {% render_model article "lead_in" "" "" "truncatewords:'50'" %}
+      </div>
+      <div class="card-footer">
+        <a class="btn btn-primary-sm" href="{% namespace_url 'article-detail' article.slug namespace=namespace default='' %}">Дізнатись більше<i class="ico ico-arrow"></i></a>
+      </div>
+    </article>
+
+{% endif %}

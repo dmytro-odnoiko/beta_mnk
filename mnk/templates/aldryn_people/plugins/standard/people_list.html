@@ -1,0 +1,9 @@
+{% load i18n %}
+
+        {% for group, people_list in people_groups.items %}
+            {% if group.name %}
+                {% for person in people_list %}
+                    {% include "aldryn_people/includes/person.html" with person=person group="true" %}
+                {% endfor %}
+            {% endif %}
+        {% endfor %}

@@ -1,0 +1,283 @@
+/* --- KVL --- */
+#sec01 {
+   background-color: #fff;
+   padding: 40px 0;
+}
+
+#sec01 figure {
+  border-radius: .25rem;
+
+}
+#sec01 figcaption {
+   padding: 32px 40px;
+   height: inherit;
+   color: #000;
+}
+
+#sec01 figcaption > div {
+   height: 80px;
+   position: absolute;
+   bottom: 0;
+   left: 15px;
+   width: 80px;
+   z-index: 0;
+}
+
+#sec01 figure h4 {
+  color: #760610;
+   position: relative;
+   overflow: hidden;
+   padding: 0 0 20px 0;
+   margin: 5px 0 0px;
+   text-transform: uppercase;
+}
+
+#sec01 figure:hover h4 > span {
+  background-color: #fff;
+  padding: 0 5px 0 5px;
+}
+
+/* Card 1 */
+
+#sec01 .row>div:nth-child(1) figure {
+   background: url(../img/longreads/main/kvl-1.jpg) no-repeat;
+   background-size: 0;
+   background-position: center;
+}
+
+#sec01 .row>div:nth-child(1) figure:hover {
+   background-size: cover;
+   background-position: calc(50% + 10px) center;
+   transition: background-position 0.35s ease-out;
+}
+
+#sec01 .row>div:nth-child(1) figcaption {
+   background-color: #fe9b00;
+}
+
+#sec01 .row>div:nth-child(1):hover figcaption {
+   background-color: transparent;
+   transition: background-color 0.5s;
+}
+
+#sec01 .row>div:nth-child(1) figcaption>div {
+   background: url(../img/longreads/main/ico-1.svg) no-repeat 10px calc(100% - 10px);
+   background-size: 70px;
+   opacity: 1;
+}
+
+#sec01 .row>div:nth-child(1):hover figcaption>div {
+   opacity: 0;
+   transition: opacity 0.5s;
+}
+
+/* Card 2 */
+
+#sec01 .row>div:nth-child(2) figure {
+   background: url(../img/longreads/main/kvl-2.jpg) no-repeat;
+   background-size: 0;
+   background-position: center;
+}
+
+#sec01 .row>div:nth-child(2) figure:hover {
+   background-size: cover;
+   background-position: calc(50% + 10px) center;
+   transition: background-position 0.35s ease-out;
+}
+
+#sec01 .row>div:nth-child(2) figcaption {
+   background-color: #ffc107;
+}
+
+#sec01 .row>div:nth-child(2):hover figcaption {
+   background-color: transparent;
+   transition: background-color 0.5s;
+}
+
+#sec01 .row>div:nth-child(2) figcaption>div {
+   background: url(../img/longreads/main/ico-2.svg) no-repeat 10px calc(100% - 10px);
+   background-size: 70px;
+   opacity: 1;
+}
+
+#sec01 .row>div:nth-child(2):hover figcaption>div {
+   opacity: 0;
+   transition: opacity 0.5s;
+}
+
+/* Card 3 */
+
+#sec01 .row>div:nth-child(3) figure {
+   background: url(../img/longreads/main/kvl-3.jpg) no-repeat;
+   background-size: 0;
+   background-position: center;
+}
+
+#sec01 .row>div:nth-child(3) figure:hover {
+   background-size: cover;
+   background-position: calc(50% + 10px) center;
+   transition: background-position 0.35s ease-out;
+}
+
+#sec01 .row>div:nth-child(3) figcaption {
+   background-color: #ffed00;
+}
+
+#sec01 .row>div:nth-child(3):hover figcaption {
+   background-color: transparent;
+   transition: background-color 0.5s;
+}
+
+#sec01 .row>div:nth-child(3) figcaption>div {
+   background: url(../img/longreads/main/ico-3.svg) no-repeat 10px calc(100% - 10px);
+   background-size: 70px;
+   opacity: 1;
+}
+
+#sec01 .row>div:nth-child(3):hover figcaption>div {
+   opacity: 0;
+   transition: opacity 0.5s;
+}
+
+/* Effect for line */
+#sec01 figure h4::after {
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   width: 15%;
+   height: 2px;
+   background: #760610;
+   content: '';
+   -webkit-transform: translate3d(0, 0, 0);
+   transform: translate3d(0, 0, 0);
+}
+
+#sec01 figure:hover h4::after {
+   -webkit-transition: -webkit-transform 0.35s;
+   transition: transform 0.35s;
+   -webkit-transform: translate3d(-100%, 0, 0);
+   transform: translate3d(-100%, 0, 0);
+}
+
+/* Effect for paragraph */
+#sec01 figure p {
+   padding: 1em 0;
+   opacity: 1;
+   -webkit-transform: translate3d(0, 0, 0);
+   transform: translate3d(0, 0, 0);
+}
+
+#sec01 figure:hover p {
+   opacity: 0;
+   -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+   transition: opacity 0.35s, transform 0.35s;
+   -webkit-transform: translate3d(100%, 0, 10%);
+   transform: translate3d(100%, 0, 10%);
+}
+
+/* Screens correction */
+@media screen and (min-width: 1200px) {
+   #sec01 figure {
+      height: 300px;
+   }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+   #sec01 figure {
+      height: 400px;
+   }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+   #sec01 figure {
+      height: 400px;
+      margin-bottom: 30px;
+   }
+   #sec01 figcaption>div {
+     bottom: 30px;
+   }
+   #sec01 .row>div:nth-child(1)>figure:hover, #sec01 .row>div:nth-child(2)>figure:hover, #sec01 .row>div:nth-child(3)>figure:hover {
+      background-size: 110%;
+    }
+}
+
+@media screen and (min-width: 576px) and (max-width: 767px) {
+   #sec01 figure {
+      height: 300px;
+      margin-bottom: 30px;
+   }
+   #sec01 figcaption>div {
+     bottom: 30px;
+   }
+   #sec01 .row>div:nth-child(1)>figure:hover, #sec01 .row>div:nth-child(2)>figure:hover, #sec01 .row>div:nth-child(3)>figure:hover {
+      background-size: 110%;
+    }
+}
+
+@media screen and (max-width: 575px) {
+   #sec01 figure {
+      height: 300px;
+      margin-bottom: 30px;
+   }
+   #sec01 figcaption>div {
+     bottom: 30px;
+   }
+}
+
+/* Additional media queries */
+
+@media screen and (max-width: 370px) {
+   #sec01 figure {
+      height: 300px;
+   }
+}
+
+/* --- Gromadski kampanii --- */
+
+#sec02 {
+   background-color: #dddfe29e;
+}
+
+#sec02 h2 {
+   margin: 0;
+}
+
+#sec02 .zd_img_container {
+   margin: auto;
+}
+
+#sec02 .zd_img_container>div {
+   border-radius: 50%;
+   width: 23%;
+   margin: 0;
+
+   background-color: #b5112080;
+   display: inline-block;
+   vertical-align: unset;
+}
+
+#sec02 .zd_img_container>div:first-child, #sec02 .zd_img_container>div:nth-child(8) {
+   margin-left: 12%;
+}
+
+#sec02 img {
+   width: 80%;
+   margin: 10%;
+}
+
+@media screen and (min-width: 1200px) {
+   #sec02 .zd_img_container>div {
+      border-radius: 60px;
+      width: 120px;
+      height: 120px;
+   }
+   #sec02 .zd_img_container>div:first-child, #sec02 .zd_img_container>div:nth-child(8) {
+      margin-left: 65px;
+   }
+   #sec02 img {
+      width: 96px;
+      margin: 10px;
+   }
+}
+
+/* ---  --- */

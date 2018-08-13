@@ -1,0 +1,33 @@
+{% extends "aldryn_newsblog/base.html" %}
+{% load staticfiles thumbnail cms_tags apphooks_config_tags %}
+{% block header %}
+   {% include "news_header.html" %}
+{% endblock header %}
+{% block newsblog_content %}
+
+   <section id="zd_news">
+      <div class="container">
+         <div class="row">
+
+            <ol class="breadcrumb col-md-12">
+               <li class="breadcrumb-item">
+                  <a href="/">Головна</a>
+               </li>
+               <li class="breadcrumb-item active">Усі дописи</li>
+            </ol>
+
+            <div class="col-md-8 pb-4">
+               {% for article in article_list %}
+                  {% include "aldryn_newsblog/includes/article.html" %}
+                  {% empty %}
+                  <p>Ще не створено жодної статі</p>
+               {% endfor %}
+               {% include "aldryn_newsblog/includes/pagination.html" %}
+            </div>
+            {% include "sidebar.html" %}
+
+         </div>
+      </div>
+   </section>
+
+{% endblock %}

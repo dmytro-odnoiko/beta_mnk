@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load cms_tags staticfiles %}
+
+{% block styles %}
+<link href="{% static 'css/reports.css' %}" rel="stylesheet">
+{% endblock styles %}
+
+{% block content %}
+  {% include "zd_content/reports_content.html" %}
+{% endblock content %}
+
+{% block scripts %}
+  <script src='https://npmcdn.com/isotope-layout@3/dist/isotope.pkgd.js'></script>
+  <script src="{% static 'js/zd_reports.js' %}"></script>
+{% endblock scripts %}

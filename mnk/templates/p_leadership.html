@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% load cms_tags staticfiles %}
+
+{% block styles %}
+  <link href="{% static 'css/group_list.css' %}" rel="stylesheet">
+{% endblock styles %}
+
+{% block content %}
+    {% include "zd_content/leadership_content.html" %}
+{% endblock content %}

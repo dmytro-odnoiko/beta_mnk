@@ -1,0 +1,117 @@
+{% load i18n staticfiles thumbnail cms_tags apphooks_config_tags %}
+
+{#<article class="article#}
+{#{% if article.is_featured %} featured{% endif %}#}
+{#    {% if not article.published %} unpublished{% endif %}">#}
+
+{# -- Image -- #}
+{# The image is only shown on the detail view by using the condition "and detail_view" #}
+{#    {% if article.featured_image_id and detail_view %}#}
+{#        <p>#}
+{#            <img src="{% thumbnail article.featured_image 800x450 crop subject_location=article.featured_image.subject_location %}"#}
+{#                 alt="{{ article.featured_image.alt }}">#}
+{#        </p>#}
+{#    {% endif %}#}
+
+{# -- Category -- #}
+{#    {% if article.categories.exists %}#}
+{#        <p>#}
+{#            {% for category in article.categories.all %}#}
+{#                <a href="{% namespace_url 'article-list-by-category' category.slug namespace=namespace default='' %}">{{ category.name }}</a>#}
+{#                {% if not forloop.last %}, {% endif %}#}
+{#            {% endfor %}#}
+{#        </p>#}
+{#    {% endif %}#}
+
+{# -- Title --#}
+{#    <h2>#}
+{#        {% if not detail_view %}#}
+{#            <a href="{% namespace_url 'article-detail' article.slug namespace=namespace default='' %}">{% render_model article "title" %}</a>#}
+{#        {% else %}#}
+{#            {% render_model article "title" %}#}
+{#        {% endif %}#}
+{#    </h2>#}
+
+{# -- Publishing date -- #}
+{#    <p>{{ article.publishing_date|date }}</p>#}
+
+{# -- Author -- #}
+{#    {% include "aldryn_newsblog/includes/author.html" with author=article.author %}#}
+
+{# -- Article tags -- #}
+{#    {% if article.tags %}#}
+{#        <p>#}
+{#            {% for tag in article.tags.all %}#}
+{#                <a href="{% namespace_url 'article-list-by-tag' tag=tag.slug namespace=namespace default='' %}">{{ tag.name }}</a>#}
+{#            {% endfor %}#}
+{#        </p>#}
+{#    {% endif %}#}
+
+{# -- Article text #}
+{#    {% render_model article "lead_in" %}#}
+
+{# -- Language? -- #}
+{#    {% if detail_view %}#}
+{#        {% render_placeholder article.content language placeholder_language %}#}
+{#    {% endif %}#}
+{#</article>#}
+
+<!-- {% if article.is_featured %} featured{% endif %} -->
+{% if not article.published %}
+{% else %}
+<!-- Blog Post -->
+<article class="zd_card_news_2 card mb-4">
+
+  <a href="{% namespace_url 'article-detail' article.slug namespace=namespace default='' %}">
+    <div class="zd_news_img"
+    {% if article.featured_image_id %}
+      style="background-image: url('{% thumbnail article.featured_image 800x450 crop subject_location=article.featured_image.subject_location %}')">
+    {% else %}
+      style="background-image: url({% static 'img/default_banner_md.jpg' %})">
+    {% endif %}
+  </div>
+  </a>
+
+    <div class="card-body">
+      <a href="{% namespace_url 'article-detail' article.slug namespace=namespace default='' %}">
+
+        <h2 class="card-title">
+            <!-- {% if not detail_view %} -->
+                <!-- <a href="{% namespace_url 'article-detail' article.slug namespace=namespace default='' %}"> -->
+                    {% render_model article "title" %}
+                  <!-- </a> -->
+            <!-- {% else %}
+                {% render_model article "title" %}
+            {% endif %} -->
+        </h2>
+        <p class="card-text">{% render_model article "lead_in" "" "" "truncatewords:'20'" %}</p>
+      </a>
+
+        {% if article.tags %}
+            <p>
+                {% for tag in article.tags.all %}
+                    <a href="{% namespace_url 'article-list-by-tag' tag=tag.slug namespace=namespace default='' %}">#{{ tag.name }}</a>
+                {% endfor %}
+            </p>
+        {% endif %}
+
+    </div>
+
+    <div class="card-footer text-muted">
+    <span class="meta">
+        {{ article.publishing_date|date:"d.m.Y, H:i" }},
+        <a href="{% namespace_url 'article-list-by-author' author.slug namespace=namespace default='' %}">
+            {{ article.author.name }}
+        </a> |
+        {% if article.categories.exists %}
+            {% for category in article.categories.all %}
+                <a href="{% namespace_url 'article-list-by-category' category.slug namespace=namespace default='' %}">{{ category.name }}</a>
+                {% if not forloop.last %}, {% endif %}
+            {% endfor %}
+        {% endif %}
+    </span>
+        <!-- {% render_placeholder article.content language placeholder_language %} -->
+    </div>
+
+</article>
+{% endif %}

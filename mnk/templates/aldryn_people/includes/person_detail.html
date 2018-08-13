@@ -1,0 +1,44 @@
+{% load i18n thumbnail cms_tags aldryn_people_tags staticfiles %}
+
+<article id="zd_person" class="container my-5">
+   <div class="row">
+      <div class="col-12 p-0 mb-3 text-center">
+         <h2 class="mb-0">{{ person.name }}</h2>
+         <h3>{{ person.function }}</h3>
+      </div>
+
+      <div id="zd_person-details" class="col-12 col-md-4 row">
+         {% if person.visual %}
+            <div class="col-12 col-sm-6 col-md-12 mb-3" style="background-image: url('{% thumbnail person.visual 424x640 crop subject_location=person.visual.subject_location %}')"></div>
+         {% endif %}
+         <div class="col-12 col-sm-6 col-md-12 mb-3">
+            <!-- {% if person.phone %} <strong>{% trans "Phone:" %}</strong> {{ person.phone|phoneformat }}<br> {% endif %} -->
+            <!-- {% if person.fax %} <strong>{% trans "Fax:" %}</strong> {{ person.fax }}<br> {% endif %} -->
+            {% if person.mobile %}
+               <div>
+                  <p><img class="zd_ico-sm" src="{% static 'img/icons/ico-phone-d.svg' %}" alt="phone">&nbsp;{{ person.mobile|phoneformat }}</p>
+               </div>
+            {% endif %}
+            {% if person.email %}
+               <div>
+                  <p><img class="zd_ico-sm" src="{% static 'img/icons/ico-envelope-d.svg' %}" alt="email">&nbsp;<a href="mailto:{{ person.email }}">{{ person.email }}</a>
+                  </p>
+               </div>
+            {% endif %}
+            {% if person.website %}
+               <div>
+                  <p>
+                     <a class="btn btn-secondary-2-sm" href="{{ person.website }}" target="_blank">Facebook</a>
+                  </p>
+               </div>
+            {% endif %}
+         </div>
+      </div>
+      <div class="col-12 col-md-8">
+         {% if person.description %}
+            {{ person.description|safe }}
+         {% endif %}
+      </div>
+   </div>
+
+</article>

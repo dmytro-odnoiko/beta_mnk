@@ -1,0 +1,355 @@
+#kvl_camps_01 .zd_baner_text {
+   position: absolute;
+   bottom: 10%;
+   /* left: 0; */
+}
+
+#kvl_camps_01 .zd_baner_text p {
+   color: var(--vl-yellow);
+   font-size: 50pt;
+   font-family: 'Poiret One';
+   font-weight: 600;
+   line-height: 60pt;
+   text-transform: uppercase;
+}
+
+#kvl_camps_01 .zd_baner_text span {
+   background-color: white;
+   padding: 0 5px;
+}
+
+@media screen and (max-width: 575px) {
+   #kvl_camps_01 .zd_baner_text p {
+      font-size: 30pt;
+      line-height: 40pt;
+   }
+}
+
+#kvl_camps_02 {
+   padding: 60px 0;
+}
+
+#kvl_camps_02 h2 {
+   margin-bottom: 0;
+   text-align: center;
+}
+
+#kvl_camps_02 div>p:nth-child(2) {
+  text-align: center;
+}
+
+#kvl_camps_02 div>p:nth-child(3) {
+   margin-bottom: 30px;
+   max-width: 800px;
+}
+
+#kvl_camps_03 {
+   padding: 60px 0;
+   background-color: var(--vl-yellow-1);
+}
+
+#kvl_camps_03 .part_1 h2 {
+  text-align: center;
+}
+
+#kvl_camps_03 .part_1 ul {
+   padding-left: 10%;
+   margin-bottom: 15px;
+}
+
+#kvl_camps_03 .part_1 p {
+   position: absolute;
+   top: 50%;
+   left: 10px;
+   font-size: 1.5rem;
+   color: var(--vl-black);
+}
+
+@media screen and (min-width: 1200px) {
+   #kvl_camps_03 .part_1 p {
+      top: 40%;
+      font-size: 2rem;
+      left: 0;
+   }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+   #kvl_camps_03 .part_1 p {
+      left: 0;
+   }
+}
+
+@media screen and (max-width: 575px) {
+   #kvl_camps_03 .part_1 p {
+      left: 0;
+   }
+}
+
+#kvl_camps_03 .part_2 p {
+   text-align: right;
+   margin-top: 10px;
+   font-size: 1rem;
+}
+
+#kvl_camps_03 .part_2 span {
+   background-color: #fff;
+   padding: 0 5px;
+}
+
+#kvl_camps_03 ul>li::before {
+   content: '';
+   display: inline-block;
+   height: 18px;
+   width: 18px;
+   padding-right: 5px;
+   background-image: url(../img/icons/checked.svg);
+   position: relative;
+   right: 3px;
+}
+
+#kvl_camps_04 {
+  padding: 60px 0;
+  min-height: 500px;
+  background-image: url('../img/longreads/kvlcamp/7-6.jpg');
+  background-color: #fff473;
+  background-blend-mode: multiply;
+  background-position: center;
+  background-size: cover;
+}
+
+
+#kvl_camps_04 p {
+  color: white;
+  font-weight: 600;
+  padding: 0 15px;
+  max-width: 650px;
+}
+
+#kvl_camps_04 li {
+  margin-bottom: 6px;
+}
+
+#kvl_camps_04 li > span {
+  padding: 3px 5px;
+  background-color: white;
+}
+
+
+
+#kvl_camps_05 {
+   padding: 60px 0;
+}
+
+#kvl_camps_05 .part_1 {
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+}
+
+#kvl_camps_05 .part_1 span {
+  background-color: var(--vl-yellow);
+}
+
+#kvl_camps_05 .counter {
+   text-align: center;
+   margin-top: 20px;
+}
+#kvl_camps_05 .counter img {
+  width: 75px;
+}
+
+#kvl_camps_05 .counter-count {
+   font-size: 4rem;
+   font-family: 'Oswald';
+   margin-bottom: 0;
+}
+
+#kvl_camps_05 .counter-name {
+   text-transform: uppercase;
+   font-size: 2rem;
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  #kvl_camps_05 .counter-count {
+     font-size: 3.5rem;
+  }
+  #kvl_camps_05 .counter-name {
+     font-size: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 576px) and (max-width: 767px) {
+  #kvl_camps_05 .counter-count {
+     font-size: 3rem;
+  }
+  #kvl_camps_05 .counter-name {
+     font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  #kvl_camps_05 .counter-count {
+     font-size: 3rem;
+  }
+  #kvl_camps_05 .counter-name {
+     font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  #kvl_camps_05 .counter img {
+    width: 90px;
+    position: absolute;
+    bottom: 20%;
+    right: 0;
+  }
+  #kvl_camps_05 .counter-count, #kvl_camps_05 .counter-name {
+    text-align: left;
+  }
+}
+
+#slider_comments {
+   background: linear-gradient(65deg, var(--vl-yellow) 0, var(--vl-yellow) 53.5%, #f7f7f7 53.5%, #f7f7f7 100%);
+   padding: 60px 0;
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  #slider_comments {
+     background: linear-gradient(65deg, var(--vl-yellow) 0, var(--vl-yellow) 54.5%, #f7f7f7 54.5%, #f7f7f7 100%);
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  #slider_comments {
+     background: linear-gradient(65deg, var(--vl-yellow) 0, var(--vl-yellow) 54.5%, #f7f7f7 54.5%, #f7f7f7 100%);
+  }
+}
+
+@media screen and (min-width: 576px) and (max-width: 767px) {
+  #slider_comments {
+     background: linear-gradient(65deg, var(--vl-yellow) 0, var(--vl-yellow) 56.5%, #f7f7f7 56.5%, #f7f7f7 100%);
+  }
+}
+
+@media screen and (max-width: 575px) {
+  #slider_comments {
+     background: linear-gradient(65deg, var(--vl-yellow) 0, var(--vl-yellow) 59.5%, #f7f7f7 59.5%, #f7f7f7 100%);
+  }
+}
+
+#slider_comments img {
+   max-width: 100px;
+   border-radius: 50px;
+   display: block;
+   margin: auto;
+}
+
+#slider_comments .carousel-item>div {
+   height: 240px;
+   max-width: 600px;
+   padding: 15px;
+   margin: auto;
+}
+
+@media screen and (max-width: 575px) {
+   #slider_comments .carousel-item>div {
+      height: 340px;
+   }
+}
+
+#slider_comments p {
+   text-align: center;
+   margin-top: 1rem;
+}
+
+#slider_comments h6 {
+   text-align: right;
+   margin-right: 2rem;
+   font-family: 'Roboto';
+   font-weight: 600;
+}
+
+#slider_comments .carousel-control-prev, #slider_comments .carousel-control-next {
+   top: 0;
+   display: block;
+}
+
+#slider_comments .carousel-control-prev img, #slider_comments .carousel-control-next img {
+   width: 30px;
+}
+
+#slider_comments .zd_carousel-control-prev-icon, #slider_comments .zd_carousel-control-next-icon {
+   top: 20%;
+   position: relative;
+}
+
+#kvl_camps_07 {
+   /* padding: 60px 0; */
+}
+
+#kvl_camps_07 a>div {
+   height: 100%;
+   width: 100%;
+   background-size: cover;
+   background-position: center;
+}
+
+#kvl_camps_07 a>div:hover {
+   background-color: var(--vl-black-ht);
+   background-blend-mode: multiply;
+   transition: background-color 0.5s;
+}
+#kvl_camps_07 a>div:before {
+  content: '';
+  display: block;
+  height: 50px;
+  width: 50px;
+  background-image: url(../img/longreads/kvlcamp/loupe.svg);
+  position: relative;
+  left: 50%;
+  top: 50%;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+}
+
+#kvl_camps_07 a>div:hover:before {
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+
+@media screen and (min-width: 1200px) {
+   #kvl_camps_07 .row>div {
+      height: 246px;
+   }
+   #kvl_camps_07>div {
+      width: 1140px;
+      padding: 0 15px;
+      margin: auto;
+   }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+   #kvl_camps_07 .row>div {
+      height: 206px;
+   }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+   #kvl_camps_07 .row>div {
+      height: 230px;
+   }
+}
+
+@media screen and (min-width: 576px) and (max-width: 767px) {
+   #kvl_camps_07 .row>div {
+      height: 170px;
+   }
+}
+
+@media screen and (max-width: 575px) {
+   #kvl_camps_07 .row>div:first-child {}
+   #kvl_camps_07 .row>div {
+      /* margin-top: 7px; */
+      min-height: 200px;
+   }
+}

@@ -1,0 +1,26 @@
+#zd_reports .zd_filters {
+  margin-bottom: 15px;
+}
+#zd_reports .zd_filters .is-checked {
+  background-color: #e30016;
+}
+
+#zd_reports .zd_report {
+  padding: 0;
+}
+
+#zd_reports .zd_report > div {
+  border: 1px solid var(--mnk-red_2);
+  margin: 3px;
+  padding: 10px;
+  background-color: #fff;
+}
+
+#zd_reports .zd_report p {
+  display: inline-block;
+  margin: 0;
+}
+
+#zd_reports .zd_report a {
+  float: right;
+}

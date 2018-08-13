@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% load cms_tags staticfiles%}
+
+{% block styles %}
+   <link href="{% static 'css/gallery.css' %}" rel="stylesheet">
+{% endblock styles %}
+
+{% block content %}
+   {% include "zd_content/gallery_content.html" %}
+{% endblock content %}
+
+{% block scripts %}{% endblock scripts %}

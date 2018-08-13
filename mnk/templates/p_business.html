@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load cms_tags staticfiles %}
+
+{% block styles %}
+<link href="{% static 'css/business.css' %}" rel="stylesheet">
+{% endblock styles %}
+
+{% block header %}
+
+{% endblock header %}
+
+{% block content %}
+   {% include "zd_content/business_content.html" %}
+{% endblock content %}
+
+{% block scripts %}{% endblock scripts %}

@@ -1,0 +1,53 @@
+#zd_gallery {
+  padding: 60px 0;
+}
+
+#zd_gallery {
+  width: 100%;
+}
+
+#zd_gallery .album {
+  padding: 0;
+}
+
+#zd_gallery .card span {
+  background-color: #fff;
+  padding: 2px 5px;
+  font-weight: 600;
+}
+
+#zd_gallery .description {
+  height: 200px;
+  overflow: hidden;
+}
+
+#zd_gallery .card {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: var(--vl-black-ht);
+  background-blend-mode: multiply;
+  width: 100%;
+  height: 200px;
+  border-radius: 0;
+  border: 0;
+  padding: 10px;
+  transition: background-color .5s;
+}
+
+#zd_gallery .card:hover {
+  background-color: var(--mnk-red-1);
+}
+
+#zd_gallery .card .views {
+  position: absolute;
+  bottom: 5px;
+  left: 10px;
+}
+
+#zd_gallery .card .views p {
+  color: #fff;
+  font-weight: 600;
+  display: inline-block;
+  margin: 0;
+}

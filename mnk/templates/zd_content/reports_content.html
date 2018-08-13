@@ -1,0 +1,37 @@
+{% load cms_tags staticfiles %}
+
+<header id="header_lib" class="masthead" style="background-image: url('{% static 'img/headers/library.jpg' %}')">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8 col-md-10 mx-auto"></div>
+		</div>
+	</div>
+</header>
+
+<section id="zd_reports" class=" my-5">
+	<div class="container">
+
+		<div class="zd_filters button-group">
+			<button class="btn btn-sort button is-checked" data-filter="*">Усі</button>
+			{% for year in years %}
+				<button class="btn btn-sort button" data-filter="year{{year}}">{{year}}</button>
+			{% endfor %}
+			<button class="btn btn-sort button" data-filter="kvl">КВЛ</button>
+		</div>
+
+		<div class="row zd_files">
+			{% for report in reports %}
+				<div class="zd_report col-sm-6 col-md-4 all y-{{report.report_year}}">
+					<div>
+						<h4 class="name">{{report.report_name}}</h4>
+						<p class="year">{{report.report_year}}</p>
+						<a class="btn btn-primary-sm" href="{{report.report_file.url}}" target="_blank">Читати
+							<i class="ico ico-file"></i>
+						</a>
+					</div>
+				</div>
+			{% endfor %}
+
+		</div>
+	</div>
+</section>

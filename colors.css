@@ -1,0 +1,27 @@
+.zd_brandbook_colors {
+
+  color: #1b1918; /* dark */
+  color: #8D8784; /* - mono ld */
+
+  color: #e8e8e7; /* grey */
+
+  color: #e30016; /* red */
+  color: #94000E; /* - mono rd */
+
+  color: #ffec00; /* yellow */
+
+  color: #ffffff; /* white */
+}
+
+.zd_other_colors {
+  color: #343a40; /* - half dark */
+}
+
+.zd_idea_test_colors {
+    color: #b51120; /* red */
+    color: #242424; /* black */
+}
+
+.zd_parts_colors {
+  color: #8D8784; /* borders */
+}

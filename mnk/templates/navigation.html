@@ -1,0 +1,152 @@
+{% load staticfiles %}
+{% block navigation %}
+   <nav class="navbar navbar-custom fixed-top navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+
+         <a class="navbar-brand" href="/">
+            <div class="row">
+               <div id="zd_logo" class="col-4">
+                  <img src="{% static 'img/mnk-zvir-white.svg' %}" width="40">
+               </div>
+               <div id="zd_title" class="col-8">
+                  <h6>Молодіжний</h6>
+                  <h6>Націоналістичний</h6>
+                  <h6>Конгрес</h6>
+               </div>
+            </div>
+         </a>
+         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+         </button>
+
+         <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+               <li class="nav-item dropdown zd_underline">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                     Про нас
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                     <li>
+                        <a class="dropdown-item" href="/nasha-ideologiya/">Наша ідеологія</a>
+                     </li>
+                     <li>
+                        <a class="dropdown-item" href="/nasha-istoriya/">Наша історія</a>
+                     </li>
+                     <li>
+                        <a class="dropdown-item" href="/kerivnictvo/">Керівництво</a>
+                     </li>
+                     <li>
+                        <a class="dropdown-item" href="/pochesne-chlenstvo/">Почесне членство</a>
+                     </li>
+                     <li>
+                        <a class="dropdown-item" href="/galereya/">Галерея</a>
+                     </li>
+                     <li>
+                        <a class="dropdown-item" href="/zvitnist/">Звітність</a>
+                     </li>
+                     <li>
+                        <a class="dropdown-item" href="/biblioteka/">Бібліотека</a>
+                     </li>
+                     <li>
+                        <a class="dropdown-item" href="/svij-do-svogo-po-svoye/">Свій до свого по своє</a>
+                     </li>
+                     <li>
+                        <a class="dropdown-item disabled" href="/arhiv/">Архів</a>
+                     </li>
+                     <li>
+                        <a class="dropdown-item" href="/partneri/">Партнери</a>
+                     </li>
+                  </ul>
+               </li>
+
+               <li class="nav-item zd_underline">
+                  <a class="nav-link" href="/novini/">Новини</a>
+               </li>
+
+               <li class="nav-item dropdown dropdown-menu-right zd_underline">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                     Наша діяльність
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                     <li>
+                        <a class="dropdown-item dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                           Таборовий сезон
+                        </a>
+                        <ul class="dropdown-menu">
+                           <li>
+                              <a class="dropdown-item" href="http://gurby.org.ua/" target="_blank">Гурби-Антонівці</a>
+                           </li>
+                           <li>
+                              <a class="dropdown-item" href="/vidvaga/">Відвага</a>
+                           </li>
+                           <li>
+                              <a class="dropdown-item" href="/vatra/">Повстанська Ватра</a>
+                           </li>
+                        </ul>
+                     </li>
+                     <li>
+                        <a class="dropdown-item" href="/gromadski-kampaniyi/">Громадські кампанії</a>
+                     </li>
+                     <li>
+                        <a class="dropdown-item" href="http://vilni.org.ua/" target="_blank">Вільні Люди</a>
+                     </li>
+                     <li>
+                        <a class="dropdown-item" href="/kvl-tabori/">Табори КВЛ</a>
+                     </li>
+                     <!-- <li>
+                        <a class="dropdown-item dropdown-toggle disabled" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                           КВЛ
+                        </a>
+                        <ul class="dropdown-menu">
+                           <a class="dropdown-item disabled" href="/seminari-kvl/">Семінари КВЛ</a>
+                           <a class="dropdown-item disabled" href="/kvl-tabori/">Табори КВЛ</a>
+                        </ul>
+                     </li> -->
+                  </ul>
+               </li>
+
+               <li class="nav-item zd_underline">
+                  <a class="nav-link" href="/contacts/">Контакти</a>
+               </li>
+
+               <li class="nav-item zd_underline">
+                  <a class="nav-link" href="/support_us/">Підтримати</a>
+               </li>
+               <li id="zd_search_ico" class="nav-item">
+                  <a class="nav-link d-none d-lg-block po-link" href="#">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30px" height="30px" viewBox="0 0 485.213 485.213">
+                      <g style="fill:#ffffff;">
+                        <path d="M471.882,407.567L360.567,296.243c-16.586,25.795-38.536,47.734-64.331,64.321l111.324,111.324    c17.772,17.768,46.587,17.768,64.321,0C489.654,454.149,489.654,425.334,471.882,407.567z" style="fill:#ffffff;"/>
+                        <path
+                          d="M363.909,181.955C363.909,81.473,282.44,0,181.956,0C81.474,0,0.001,81.473,0.001,181.955s81.473,181.951,181.955,181.951    C282.44,363.906,363.909,282.437,363.909,181.955z M181.956,318.416c-75.252,0-136.465-61.208-136.465-136.46    c0-75.252,61.213-136.465,136.465-136.465c75.25,0,136.468,61.213,136.468,136.465    C318.424,257.208,257.206,318.416,181.956,318.416z"
+                          style="fill:#ffffff;fill-opacity:1"/>
+                        <path d="M75.817,181.955h30.322c0-41.803,34.014-75.814,75.816-75.814V75.816C123.438,75.816,75.817,123.437,75.817,181.955z" id="path6" style="fill:#ffffff;fill-opacity:1"/>
+                      </g>
+                    </svg>
+
+                  </a>
+                  <a class="nav-link d-lg-none" href="#">Пошук</a>
+               </li>
+            </ul>
+         </div>
+      </div>
+
+      <div class="po-content d-none">
+         <div class="po-title">
+            Пошук:
+         </div>
+         <div class="po-body">
+            <form class="form-inline">
+               <div class="input-group">
+                  <input type="text" class="form-control" placeholder="..." autofocus="autofocus">
+                  <span class="input-group-btn">
+                     <button class="btn btn-primary" type="submit">Знайти!</button>
+                  </span>
+               </div>
+            </form>
+         </div>
+      </div>
+
+   </nav>
+
+{% endblock %}

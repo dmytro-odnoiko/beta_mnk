@@ -1,0 +1,28 @@
+{% load  staticfiles thumbnail cms_tags apphooks_config_tags %}
+
+<div class="zd_card-news col-md-4 portfolio-item">
+
+    {% if article.featured_image_id %}
+        <div class="card h-100 zd_banner"
+             style="background-image: url('{% thumbnail article.featured_image 800x450 crop subject_location=article.featured_image.subject_location %}')">
+    {% else %}
+        <div class="card h-100 zd_banner" style="background-image: url('{% static 'img/default_banner_sm.jpg' %}')">
+    {% endif %}
+    <div>
+        <img class="zd_ico_pin" src="{% static "img/icons/ico-pin.svg" %}">
+    </div>
+
+    <a href="{% namespace_url 'article-detail' article.slug namespace=namespace default='' %}">
+        <div class="card-body">
+            <h4 class="card-title">
+                {% render_model article "title" %}
+            </h4>
+{#            <p class="card-text" style="margin: 0">#}
+                {% render_model article "lead_in" "" "" "truncatewords:'20'" %}
+{#            </p>#}
+        </div>
+    </a>
+    </div>
+
+
+    </div>

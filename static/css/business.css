@@ -1,0 +1,79 @@
+#zd_business article {
+   /* box-shadow: 0 0 7px #666; */
+}
+
+#zd_business .card-head {}
+
+#zd_business .card-body {
+   padding: 0;
+   padding-top: 15px;
+}
+
+#zd_business .card-footer {
+   background-color: unset;
+   border: 0;
+   padding: 0;
+   padding-bottom: 30px;
+}
+
+#zd_business .card-footer img {
+   width: 30px;
+   height: 30px;
+}
+
+#zd_business .image {
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: top center;
+   height: 250px;
+}
+
+#zd_business .year {
+   position: absolute;
+   right: 15px;
+   background-color: #ffffffdd;
+   padding: 5px;
+   top: 0;
+}
+
+#zd_business h2 {
+   margin-bottom: 0;
+}
+
+#zd_business .direction {
+   font-size: 0.9rem;
+   color: var(--vl-black-ht);
+   font-weight: 600;
+}
+
+#zd_business p {
+   margin-bottom: 0.5rem;
+}
+
+@media screen and (min-width: 1200px) {
+   #zd_business .description {
+      min-height: 180px;
+   }
+   #zd_business .image {
+      height: 300px;
+   }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+   #zd_business .description {
+      min-height: 200px;
+   }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+   #zd_business .description {
+      min-height: 280px;
+   }
+   #zd_business .image {
+      height: 200px;
+   }
+}
+
+@media screen and (min-width: 576px) and (max-width: 767px) {}
+
+@media screen and (max-width: 575px) {}

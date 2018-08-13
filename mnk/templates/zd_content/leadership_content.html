@@ -1,0 +1,21 @@
+{% load cms_tags staticfiles %}
+
+<header class="masthead" style="background-image: url('{% static 'img/headers/leaders.jpg' %}')">
+   <div class="container">
+      <div class="row"></div>
+   </div>
+</header>
+
+{% block content %}
+   <div class="container my-4">
+      <h2>Центральний провід:</h2>
+      <div class="teamy-team my-4">
+         <!-- <div> <h2>Центральний провід:</h2> </div> -->
+         {% placeholder "Leaders list" %}
+      </div>
+      <h2>Секретаріат:</h2>
+      <div class="teamy-team my-4">
+         {% placeholder "Secretariat list" %}
+      </div>
+   </div>
+{% endblock %}

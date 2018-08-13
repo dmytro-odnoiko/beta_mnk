@@ -1,0 +1,45 @@
+.t-circle {
+    background-color: #ccc;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    display: block;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    line-height: 60px;
+    color: #fff;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+#rec3953492 .text {
+  height: 220px;
+}
+
+#rec5990832 .t160__text {
+  height: 230px;
+}
+
+@media screen and (max-width: 980px) {
+  #rec5990832 .t160__text {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #rec5990832 .t160__text {
+    font-size: 14px;
+  }
+}
+
+#rec3961951 a {
+    font-weight: 600;
+}
+
+h6 {
+margin-bottom: .5rem;
+}

@@ -1,0 +1,21 @@
+{% extends "aldryn_newsblog/base.html" %}
+{% load i18n cms_tags apphooks_config_tags %}
+
+{% block title %}
+    {{ article.title }} - {{ block.super }}
+{% endblock %}
+
+{% block newsblog_content %}
+    <div class="container mb-4">
+        {% include "aldryn_newsblog/social_companies/includes/article_full.html" with detail_view="true" %}
+        <ul class="pagination">
+            {% if prev_article %}
+                <li><a href="{{ prev_article.get_absolute_url }}">Попередня</a></li>
+            {% endif %}
+            <li><a href="{% namespace_url "article-list" %}">Назад до огляду</a></li>
+            {% if next_article %}
+                <li><a href="{{ next_article.get_absolute_url }}">Наступна</a></li>
+            {% endif %}
+        </ul>
+    </div>
+{% endblock %}

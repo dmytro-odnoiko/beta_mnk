@@ -1,0 +1,33 @@
+{% load staticfiles thumbnail cms_tags apphooks_config_tags %}
+
+<div id="zd_sidebar" class="col-md-4">
+
+    <!-- Категорії -->
+    <div class="card zd_sidebar mb-4">
+        <h4 class="card-header">Категорії</h4>
+        <div class="card-body">
+            {% static_placeholder "Categories" %}
+        </div>
+    </div>
+
+    {% static_placeholder "Side baner-1" %}
+    {% static_placeholder "Side baner-2" %}
+
+    <!-- Останні новини -->
+    <div class="card zd_sidebar my-4">
+        <h4 class="card-header">Останні новини</h4>
+        <div class="card-body">
+            {% placeholder "aaaaa" %}
+        </div>
+    </div>
+
+    <!-- Автори -->
+    <!-- <div class="card zd_sidebar zd_authors my-4">
+        <h5 class="card-header">Популярні автори</h5>
+        <div class="card-body">
+            {% static_placeholder "Authors" %}
+        </div>
+    </div> -->
+
+
+</div>

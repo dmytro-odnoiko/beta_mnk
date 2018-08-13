@@ -1,0 +1,35 @@
+{% load cms_tags staticfiles app_filter%}
+
+<header id="header_lib" class="masthead" style="background-image: url('{% static 'img/headers/library.jpg' %}')">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8 col-md-10 mx-auto"></div>
+		</div>
+	</div>
+</header>
+
+<section id="zd_gallery">
+	<div class="container">
+		<div class="row">
+
+			{% for album in albums %}
+				<div class="album col-12 col-md-6 col-lg-4">
+					<a  href='https://www.flickr.com/photos/160653337@N06/albums/{{ album|get_item:"id" }}' target="_blank">
+					<div class="card" style="background-image: url(https://farm{{ album|get_item:"farm" }}.staticflickr.com/{{ album|get_item:"server" }}/{{ album|get_item:"primary" }}_{{ album|get_item:"secret" }}_n.jpg)">
+						<p><span class="name">{{ album|get_item:"title"|get_item:"_content" }}</span></p>
+						<div class="views">
+							<i class="ico ico-eye"></i>
+							<p>{{ album|get_item:"count_views" }}</p>
+						</div>
+					</div>
+					</a>
+					<!-- <img src='https://farm{{ album|get_item:"farm" }}.staticflickr.com/{{ album|get_item:"server" }}/{{ album|get_item:"primary" }}_{{ album|get_item:"secret" }}_n.jpg' alt="Обкладинка"> -->
+					<!-- <div class="description">
+						{{ album|get_item:"description"|get_item:"_content" }}
+					</div> -->
+				</div>
+			{% endfor %}
+
+		</div>
+	</div>
+</section>

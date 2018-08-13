@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load cms_tags staticfiles %}
+
+{% block styles %}
+   <link href="{% static 'css/kvl_camps.css' %}" rel="stylesheet">
+   <link href="{% static 'css/vendors/lightbox.css' %}" rel="stylesheet">
+{% endblock styles %}
+
+{% block content %}
+   {% include "zd_content/kvl_camps_content.html" %}
+{% endblock content %}
+
+{% block scripts %}
+   <script src="{% static 'js/zd_landing_scroll_down.js' %}"></script>
+   <script src="{% static 'js/vendors/lightbox.js' %}"></script>
+   <script src="{% static 'js/zd_counter.js' %}"></script>
+{% endblock scripts %}

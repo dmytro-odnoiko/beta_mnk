@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% load cms_tags staticfiles %}
+<!-- saved from url=(0026)http://vidvaga.mnk.org.ua/ -->
+
+{% block styles %}
+    <link rel="stylesheet" href="{% static "longreads/vidvaga/tilda-grid-3.0.min.css" %}" type="text/css" media="all">
+    <link rel="stylesheet" href="{% static "longreads/vidvaga/tilda-blocks-2.12.css" %}" type="text/css" media="all">
+    <link rel="stylesheet" href="{% static "longreads/vidvaga/tilda-zoom-1.0.min.css" %}" type="text/css" media="all">
+    <link rel="stylesheet" href="{% static "longreads/tilda_replace.css" %}" type="text/css" media="all">
+{% endblock styles %}
+
+{% block content %}
+
+    {% include "zd_content/vidvaga_content.html" %}
+{% endblock content %}
+
+{% block scripts %}
+    <script src="{% static "longreads/vidvaga/jquery-1.10.2.min.js" %}"></script>
+    <script src="{% static "longreads/vidvaga/bootstrap.min.js" %}"></script>
+{% endblock scripts %}

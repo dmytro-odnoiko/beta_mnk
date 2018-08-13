@@ -1,0 +1,41 @@
+{% load i18n thumbnail cms_tags aldryn_people_tags staticfiles %}
+
+<figure class="teamy teamy_style2 teamy_mask-circle teamy_zoom-photo zd_person">
+   <div class="teamy__layout">
+      <div class="teamy__preview">
+         {% if person.visual %}
+            <img class="teamy__avatar" src="{% thumbnail person.visual 424x640 crop subject_location=person.visual.subject_location %}" alt="{{ person.name }}">
+         {% else %}
+            <img class="teamy__avatar" alt="The demo photo" src="{% static 'img/icons/ico-empty-ava-424x640.svg' %}">
+         {% endif %}
+      </div>
+      <div class="teamy__back">
+         <div class="teamy__back-inner zd_contacts_leaders">
+            {% if person.mobile %}
+               <div>
+                  <p><img class="zd_ico-sm" src="{% static 'img/icons/ico-phone-w.svg' %}" alt="phone">&nbsp;{{ person.mobile|phoneformat }}</p>
+               </div>
+            {% endif %}
+            {% if person.email %}
+               <div>
+                  <p><img class="zd_ico-sm" src="{% static 'img/icons/ico-envelope-w.svg' %}" alt="email">&nbsp;<a href="mailto:{{ person.email }}">{{ person.email }}</a>
+                  </p>
+               </div>
+            {% endif %}
+            <div>
+               <p><img class="zd_ico-sm" src="{% static 'img/icons/ico-eye.svg' %}" alt="email">&nbsp;<a href="{{ person.get_absolute_url }}">Більше інформації</a>
+               </p>
+            </div>
+            {% if person.website %}
+               <a class="btn btn-secondary-2-sm" href="{{ person.website }}" target="_blank">Facebook</a>
+            {% endif %}
+         </div>
+      </div>
+   </div>
+   <a href="{{ person.get_absolute_url }}">
+      <figcaption class="teamy__content">
+         <h3 class="teamy__name">{{ person.name }}</h3>
+         <span class="teamy__post">{{ person.function }}</span>
+      </figcaption>
+   </a>
+</figure>
